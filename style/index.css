@@ -14,7 +14,6 @@ menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
-	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
@@ -23,9 +22,6 @@ time, mark, audio, video {
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
-}
-body {
-	line-height: 1;
 }
 ol, ul {
 	list-style: none;
@@ -43,18 +39,19 @@ table {
 	border-spacing: 0;
 }
 
+body{
+	box-sizing:border-box;
+	max-width:100%;
+	padding:0;
+	margin:0;
+	overflow-x:hidden;
+	border:10px outset skyblue;
+}
 header {
 	display:flex;
 	margin:2rem;
 	justify-content:space-between
 }
-
-
-html{
-	border:10px outset skyblue;
-	margin:.5em
-}
-
 h1 {
 	align-self:flex-start;
 }
@@ -108,9 +105,8 @@ h2{
 	
 }.box {
 	text-align: center;
-	width:33%;
+	width:30%;
 	margin-top:5em;
-	
 }
 
 .contact{
@@ -163,8 +159,8 @@ h2{
 
 .fa {
 	padding: 20px;
-	font-size: 30px;
-	width: 50px;
+	font-size: 3rem;
+	width: 100%;
 	text-align: center;
 	text-decoration: none;
 	border:2px solid black;
@@ -189,6 +185,48 @@ h2{
   .social{
 	  display:flex;
 	  justify-content: center;
-	  background-color:wheat
+	  background-color:wheat;
+	  width:100%
   }
-  .
+@media(max-width:800px){
+	html{
+		width:800px
+	}
+	header{
+		flex-direction: column;
+		display:flex;
+		align-items:center;
+		text-align:center;
+
+	}
+	.toplinks{
+		margin-top:1em;
+		line-height:2em;
+		
+	}
+	.topbuttons{
+		margin:.5em;
+	}
+	.box{
+		display:flex;
+		flex-direction: column;
+		margin-left:auto;
+		margin-right:auto;
+
+	}
+	.fa{
+		margin-left:auto;
+		margin-right:auto;
+	}
+}
+@media(max-width:500px){
+	.toplinks{
+		display:flex;
+		flex-direction: column;
+	}
+	.box {
+		width:40%;
+		margin-left:auto;
+		margin-right:auto;
+}
+
