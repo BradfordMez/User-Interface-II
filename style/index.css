@@ -1,1 +1,232 @@
 /* Add CSS styling here */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body{
+	box-sizing:border-box;
+	max-width:100%;
+	padding:0;
+	margin:0;
+	overflow-x:hidden;
+	border:10px outset skyblue;
+}
+header {
+	display:flex;
+	margin:2rem;
+	justify-content:space-between
+}
+h1 {
+	align-self:flex-start;
+}
+h2{
+	font-size:2em;
+	color:teal;
+}
+.topbuttons{
+	border:2px inset grey;
+	padding:.5rem 1.5rem;
+	text-decoration:none;
+	color:teal;
+	margin-left:1.25em;
+}
+.topbuttons:hover {
+	color:dodgerblue;
+	background-color:gray
+}
+
+#top{
+	background-image:url('https://picsum.photos/800');
+	height:90vh;
+	background-repeat:no-repeat;
+	background-position:center;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	
+}
+.maintitles h1{
+	font-size:3em;
+	color:white;
+	background-color:tomato;
+	border:red 2px solid;
+	margin-bottom:1em;
+	padding:1em;
+	border-radius:50%
+}
+.maintitles h2{
+	color:white;
+	font-size:2em;
+	text-align:center;
+	background-color:black;
+	border:red 2px solid;
+}
+
+.bottomprojects{
+	display:flex;
+	flex-flow: wrap;
+	justify-content:center;
+	
+}.box {
+	text-align: center;
+	width:30%;
+	margin-top:5em;
+}
+
+.contact{
+	text-decoration:none;
+	border:5px dotted snow;
+	border-radius: 50%;
+	padding:.5em
+}
+.contact:hover{
+	border:5px dotted teal;
+	background-color:darkslategrey;
+	color:dodgerblue;
+}
+.bottomlink {
+	background-color: wheat;
+	font-size: 2rem;
+}
+
+.footer {
+	background-color: wheat;
+	padding:5em;
+	display:flex;
+	justify-content: center;
+	border:10px outset skyblue;
+	margin-top:5em;
+}
+
+.toplinks {
+	font-size:2em;
+	
+}
+.button{
+	display:flex;
+	justify-content: center;
+	font-size: 1.25em;
+	border:2px solid maroon;
+	margin:7em;
+	background-color:grey;
+	padding-top:1em;
+	padding-bottom:1em;
+	border-radius:50%;
+	text-decoration:none;
+	color:white;
+}
+.button:hover{
+	color:darkred;
+	background-color: lavender;
+	text-transform:Uppercase;
+}
+
+.fa {
+	padding: 20px;
+	font-size: 3rem;
+	width: 100%;
+	text-align: center;
+	text-decoration: none;
+	border:2px solid black;
+	margin-left:5em;
+	margin-right:5em;
+  }
+  .fa:hover {
+	opacity: 0.7;
+  }
+  .fa-facebook {
+	background: #3B5998;
+	color: white;
+  }
+  .fa-instagram {
+	background: #55ACEE;
+	color: white;
+  }
+  .fa-google{
+	  color:white;
+	  background-color: tomato;
+  }
+  .social{
+	  display:flex;
+	  justify-content: center;
+	  background-color:wheat;
+	  width:100%
+  }
+@media(max-width:800px){
+	html{
+		width:800px
+	}
+	header{
+		flex-direction: column;
+		display:flex;
+		align-items:center;
+		text-align:center;
+
+	}
+	.toplinks{
+		margin-top:1em;
+		line-height:2em;
+		
+	}
+	.topbuttons{
+		margin:.5em;
+	}
+	.box{
+		display:flex;
+		flex-direction: column;
+		margin-left:auto;
+		margin-right:auto;
+
+	}
+	.fa{
+		margin-left:auto;
+		margin-right:auto;
+	}
+}
+@media(max-width:500px){
+	.toplinks{
+		display:flex;
+		flex-direction: column;
+	}
+	.box {
+		width:40%;
+		margin-left:auto;
+		margin-right:auto;
+}
+
